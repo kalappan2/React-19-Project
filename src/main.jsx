@@ -1,38 +1,47 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Make sure Routes and Route are imported
+// 1. CHANGE THIS LINE: Import HashRouter instead of BrowserRouter
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-import './index.css'; // Your global styles (ensure .bg-overlay, .background are defined here or in App.css)
+import './index.css';
 import App from './App.jsx';
-import Tech from './Tech specs.jsx'; // Consider renaming to TechSpecs.jsx for convention
-import Cards from './Cards.jsx';   // Consider renaming to CardsPage.jsx or similar
-import FormPage from './Form.jsx'
+import Tech from './Tech specs.jsx';
+import Cards from './Cards.jsx';
+import FormPage from './Form.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Only if needed for Bootstrap JS components
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
   <StrictMode>
-    <BrowserRouter>
+    {/* 2. CHANGE THIS COMPONENT: Use HashRouter as the wrapper */}
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<App />}> {/* App.jsx is the layout element */}
-          {/* No `index` route here because App.jsx handles the "/" content itself */}
+        {/* 
+          This is a nested route structure. 
+          For this to work, your App.jsx component MUST contain an <Outlet /> component 
+          where you want the nested pages (Tech, Cards, etc.) to appear.
+        */}
+        <Route path="/" element={<App />}>
+          
+          {/* Nested routes render inside App's <Outlet /> */}
           <Route path="tech" element={<Tech />} />
           <Route path="cards" element={<Cards />} />
-          <Route path="/form" element={<FormPage />} />
+
+          {/* 3. (Minor Improvement) I removed the leading slash from "/form" for consistency */}
+          <Route path="form" element={<FormPage />} />
           
-          {/* Optional: 404 for unmatched routes within the App layout */}
+          {/* This is your 404 page for routes that don't match inside the app */}
           <Route path="*" element={
             <div className="container text-center py-5">
               <h2>404 - Page Not Found</h2>
-              <p>Sorry, the page you are looking for does not exist.</p>
-              {/* <Link to="/">Go to Homepage</Link>  // If you use Link here, import it */}
+              <p>Sorry, the page you are looking for does not exist within the app.</p>
             </div>
           }/>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
