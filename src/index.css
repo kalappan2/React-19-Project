@@ -1,0 +1,60 @@
+.img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.title-text {
+  color: blue;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-title {
+  color: blue;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.background {
+  background-image: url('./assets/img4.webp');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+
+.desc-text {
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+.img5 {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 1.5rem;
+  }
+
+  .product-title {
+    font-size: 1.25rem;
+  }
+
+  .desc-text {
+    font-size: 0.9rem;
+  }
+}

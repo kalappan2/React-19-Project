@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.img {
+  width: 500px;
+  height: 500px;
+}
+
+@media screen and (max-width: 992px) {
+  .img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.background {
+  background-image: url('./assets/img4.webp');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.background .img5 {
+  max-width: 100%;
+  height: auto;
+  padding-left: 0;
+  padding-top: 20px;
+}
+
+.background h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.background p {
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
+  max-width: 800px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .background h1 {
+    font-size: 22px;
+  }
+
+  .background p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* */
+/* Import Poppins font (put this at the top of your CSS or HTML) */
+
+.background button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 10px; /* Normal soft corners */
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hover animation */
+.background button:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 576px) {
+  .background button {
+    font-size: 13px;
+    padding: 8px 16px;
+    width: 140px;
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .background button {
+    font-size: 13.5px;
+    padding: 9px 18px;
+    width: 150px;
+    height: auto;
+  }
+}
+
+
+
+
+/* Default styles for smaller screens  [First section]*/
+.bg-overlay {
+  background-image: url('./assets/img6.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Full height by default */
+  padding: 50px;
+}
+
+.bg-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+.bg-overlay > .container {
+  position: relative;
+  z-index: 1; /* Bring text above the overlay */
+}
+
+/* Media Query for screens large and above */
+@media (min-width: 992px) { /* Target screens lg and above */
+  .bg-overlay {
+    min-height: 60vh; /* Reduce height to 60% of the viewport height */
+  }
+
+  .bg-overlay::before {
+    height: 60vh; /* Adjust overlay height for lg screens and above */
+  }
+}
+
+.lastGrid{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.fa-playstation{
+  font-size: 40px;
+}
+.s4:hover{
+  width:260px;
+  height: 45px;
+}
+

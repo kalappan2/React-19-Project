@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bi {
+  background-image: url('./assets/img8.webp');
+  width: 100%;
+  /* min-height: 100vh; */ /* Comment out or remove the old line */
+  min-height: 60vh; /* New: e.g., 60% of viewport height. Adjust as needed (50vh, 70vh, etc.) */
+  /* If content might grow taller than this, min-height is good.
+     If you want to strictly cap the height, you could use 'height' instead of 'min-height',
+     but then content might overflow if it's too much. */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Headings and text */
+.bi h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.bi p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+/* Stylish button */
+.si {
+  margin-top: 1.5rem;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.si:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bi {
+    /* Optionally, make it even shorter on smaller screens if desired */
+    min-height: 50vh; /* Example: further reduced for mobile */
+  }
+  .bi h1 {
+    font-size: 2rem;
+  }
+
+  .bi p {
+    font-size: 1rem;
+  }
+
+  .si {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.95rem;
+    padding: 12px 25px;
+  }
+}
+
+
+/* table part*/
+
+

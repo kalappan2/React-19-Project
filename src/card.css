@@ -1,0 +1,14 @@
+.card-bg {
+  background-image: url('./assets/img9.webp');
+  background-size: contain;     /* Scales image to fit inside, maintaining aspect ratio. No cropping. May leave empty space. */
+  background-position: center;  /* Centers the (potentially smaller) image. */
+  background-repeat: no-repeat;
+  background-color: black;  /* Optional: color for the empty space around the contained image. */
+
+  /* Again, ensure .card-bg has dimensions */
+  width: 100%;
+  min-height: 50vh; /* Or other desired height */
+}
+.container{
+    margin-top: 20px;
+}
