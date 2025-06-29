@@ -32,14 +32,6 @@ root.render(
 
           {/* 3. (Minor Improvement) I removed the leading slash from "/form" for consistency */}
           <Route path="form" element={<FormPage />} />
-          
-          {/* This is your 404 page for routes that don't match inside the app */}
-          <Route path="*" element={
-            <div className="container text-center py-5">
-              <h2>404 - Page Not Found</h2>
-              <p>Sorry, the page you are looking for does not exist within the app.</p>
-            </div>
-          }/>
         </Route>
       </Routes>
     </HashRouter>
